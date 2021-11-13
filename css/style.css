@@ -1,16 +1,4 @@
-
-html,body,#contents,.wrapper,#back{
-    background-color: #001219;
-    height: 100%;
-    width: 100%;
-    position: relative;
-  }
-  
-  .wrapper{
-    
-  }
-  
-  li{
+li{
     list-style: none;
   }
   
@@ -21,7 +9,7 @@ html,body,#contents,.wrapper,#back{
   header{
     position: fixed;
     width: 100%;
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.9);
     padding: 20px;
     display: flex;
     align-items: center;
@@ -29,101 +17,74 @@ html,body,#contents,.wrapper,#back{
     top: 0;
   }
   
-  footer{
-    position: fixed;
-    width: 100%;
-    background-color: #fff;
-    bottom:0;
-    padding: 5px;
-    text-align: right;
-    font-size: 10px;
-  }
-  
-  header h1{
-    font-size: 20px;
-  }
-  
-  header ul{
-    display: flex;
+  #wave{
+    width:60px;
+    height: 60px;
+    background-image: url(../images/wave.png);
+    background-size: 60px auto;
+    background-position: center center;
+    background-repeat: repeat-x;
     margin-left: auto;
   }
   
-  header ul li{
-    margin-left: 20px;
+  #menu{
+    position: fixed;
+    top: 100px;
+    font-size: 100px;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1;
+    left: 20px;
+    z-index: 100;
+    cursor: pointer;
   }
   
-  #contents{
-    overflow: hidden;
+  #content{
+    position: relative;
+    margin: 100px auto;
+    padding: 20px;
+    max-width: 1000px;
   }
   
-  #back{
-    background-image: url(../images/spaceback.png);
-    background-size: cover;
-    background-position: center 100px;
-    top: 0;
-    top:90%;
-    transition: 2s all;
+  .set{
+    background-color: #ccc;
+    min-height: 400px;
+    margin-bottom: 40px;
   }
   
-  #back.anime{
-    top: 0%;
-  }
-  
-  #person{
-    position: absolute;
-    top:200px;
-    right: -100px;
-    width: 100px;
-    transition: 0.6s all;
-  }
-  
-  #person.anime{
-    right: 10px;
-  }
-  
-  
-  #car{
-    position: absolute;
-    bottom:100px;
-    max-width: 40%;
-    left: -250px;
-    width: 250px;
-    transition: 0.6s all;
-  }
-  
-  #car.anime{
-    left: 0px;
-  }
-  
-  #food{
-    width: 50%;
-    bottom: 10%;
-    margin-left: -25%;
-    left: 50%;
-    position: absolute;
-    opacity: 0;
-  }
-  
-  
-  #food.anime {
-    /* cssライブラリanimate.cssを利用 */
-    animation: zoomInDown;
-    animation-duration: 1s; 
+  body.one #backimg01,
+  body.two #backimg02,
+  body.three #backimg03{
     opacity: 1;
   }
   
-  
-  #intro{
+  #back{
     position: fixed;
-    display: flex;
-    z-index: 101;
-    background-color: #000;
     width: 100%;
     height: 100%;
-    color: #fff;
-    font-family: serif;
-    font-size: 20px;
-    align-items: center;
-    justify-content: center;
     top: 0;
+    left: 0;
+    background: #fcfcfc;
+  }
+  
+  .backimg{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: 1s all;
+  }
+  
+  img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  #line{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background: linear-gradient(to right, blue,red);
   }
